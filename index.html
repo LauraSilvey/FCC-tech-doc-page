@@ -5,36 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tech Doc Page</title>  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body> 
-  <main id="main-doc">
+  <main class="main-doc" id="main-doc">
     <section class="main-section" id="introduction">
-    	<header>Introduction</header>
+    	<header class="section-header">Introduction</header>
     	<p>Flexbox is a CSS3 layout mode, which is used to accommodate design layouts on different screen sizes and display devices.  Many web developers find flexbox easier to use than block or grid layouts.</p>  
     	<p>Flexbox is considered easier to use for many applications because it does not use floats and the flex container's margins do not collapse with the margin's of it's contents. Another reason why many designers find flexbox easier than older layout models is the widths and heights of flexboxes vary to adapt to the display space. This helps hold the lower down elements in place, like when you need a sticky footer, which can be a tricky task to deal with when using other methods.</p> 
     	<p>Another benefit of flexbox is, it takes into consideration whether you want div's to accrue to the right or the bottom of the page. The display order of flexbox elements is also independent of their order in the source code.</p>
 			<p>The characteristics of flexbox ensure popular layouts are much easier to implement with simpler and cleaner code!</p>
     </section>
     <section class="main-section" id="parent_properties">
-    	<header>Parent Properties</header>
+    	<header class="section-header">Parent Properties</header>
     	<p>The properties below are to be applied to flexbox containers.  They will affect all direct children of the container element.</p>
     	<h3 class="properties">display</h3>
-    	<p>This defines a flex container to be either block or inline.  
-    	<code>.container {
-    		display: flex | inline-flex;
-    	}</code>
+    	<p>This defines a flex container to be either block or inline.</p>  
+    	<code>.container {<br>  display: flex | inline-flex;<br>}</code>
     	<h3 class="properties">flex-direction</h3>
-    	<p>This establishes the main-axis of the container, which defines the direction flex items are placed in the flex container. Flex items primarily layout in horizontal rows or vertical columns. By default flex-direction is set to row.
-    	<code>.container{
-    		flex-direction: row | row-reverse | column | column-reverse;
-    	}</code>
+    	<p>This establishes the main-axis of the container, which defines the direction flex items are placed in the flex container. Flex items primarily layout in horizontal rows or vertical columns. By default flex-direction is set to row.</p>
+    	<code>.container {<br>  flex-direction: row | row-reverse | column | column-reverse;<br>}</code>
     	<h3 class="properties">flex-wrap</h3>
-    	<p>Flex items will all try to fit on one row.  If needed, you change the default behavior and allow items to wrap. 
-    	<code>.container {
-    		flex-wrap: nowrap | wrap |wrap-reverse;
-    	}</code>
+    	<p>Flex items will all try to fit on one row.  If needed, you change the default behavior and allow items to wrap.</p> 
+    	<code>.container {<br>  flex-wrap: nowrap | wrap |wrap-reverse;<br>}</code>
     	<ul>
     		<li>nowrap: all flex items will be on one line.</li>
     		<li>wrap: flex items will wrap on to multiple lines.</li>
@@ -42,14 +38,10 @@
     	</ul>
     	<h3 class="properties">flex-flow</h3>
     	<p>Flex-flow condenses flex-direction and flex-wrap in one property.  This defines the flex container's main and cross axes. Default is row nowrap.</p>
-    	<code>.container {
-    		flex-flow: <'flex-direction'> <'flex-wrap'>;
-    	}</code>
+    	<code>.container {<br>  flex-flow: <'flex-direction'> <'flex-wrap'>;<br>}</code>
     	<h3 class="properties">justify-content</h3>
     	<p>This defines the alignment of items along the main axis. It distributes extra free space when the items are inflexible or have reached their maximum size. It will also exert some control over the alignment of items when they overflow to mulitple lines.</p>
-    	<code>.container {
-    		justify-content: flex-start | flex-end | center | space-between | space-around;
-    	} </code>
+    	<code>.container {<br>  justify-content: flex-start | flex-end | center | space-between | space-around;<br>} </code>
     	<ul>
     		<li>flex-start (default): items are packed towards the start of the line.</li>
     		<li>flex-end: items are packed towards the end of the line.</li>
@@ -59,9 +51,7 @@
     	</ul>
     	<h3 class="properties">align-items</h3>
     	<p>This property is like justify-content, but for items on the cross-axis instead of main-axis.</p>
-    	<code>.container {
-    		align-items: flex-start | flex-end | center | baseline |stretch;
-    	}</code>
+    	<code>.container {<br>  align-items: flex-start | flex-end | center | baseline |stretch;<br>}</code>
     	<ul>
     		<li>flex-start: items are placed on the cross start line</li>
     		<li>flex-end: items are placed on the cross end line</li>
@@ -71,9 +61,7 @@
     	</ul>
     	<h3 class="properties">align-content</h3>
     	<p>This aligns a flex container's lines when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis. This property has no effect when there is only one line of flex items.</p>
-    	<code>.container {
-    		align-content: flex-start |flex-end | center | space-between | space-around | stretch;
-    	}</code> 
+    	<code>.container {<br>  align-content: flex-start |flex-end | center | space-between | space-around | stretch;<br>}</code> 
     	<ul>
     		<li>flex-start: lines packed to the start of the container</li>
     		<li>flex-end: lines packed to the end of the container</li>
@@ -84,34 +72,28 @@
     	</ul>
     </section>
     <section class="main-section" id="child_properties">
-    	<header>Child Properties</header>
+    	<header class="section-header">Child Properties</header>
   	  <h3 class="properties">order</h3>
-  	  <p>Flex items, by default, are laid out in source code order. The order property controls the order in which the items will be displayed.
-  	  <code>.item {
-  	  	order: &lt;integer&gt;;
-  	  }</code>
+  	  <p>Flex items, by default, are laid out in source code order. The order property controls the order in which the items will be displayed.</p>
+  	  <code>.item {<br>  order: &lt;integer&gt;;<br>}</code>
   	  <h3 class="properties">flex-grow</h3>
-  	  <p>This gives flex items the ability to grow, if needed.  Flex-grow accepts a number that serves as a proportion that dictates how much space the item should take up inside the flex container. Negative numbers are invalid.
-  	  <code>.item { flex-grow: &lt;number&gt;; }</code>
+  	  <p>This gives flex items the ability to grow, if needed.  Flex-grow accepts a number that serves as a proportion that dictates how much space the item should take up inside the flex container. Negative numbers are invalid.</p>
+  	  <code>.item {<br>  flex-grow: &lt;number&gt;;<br>}</code>
   	  <h3 class="properties">flex-shrink</h3>
   	  <p>This gives flex items the abiltity to shrink, if needed.  Negative numbers are invalid.</p>
-  	  <code>.item { flex-shrink: &lt;number&gt;; }</code>
+  	  <code>.item {<br>  flex-shrink: &lt;number&gt;;<br>}</code>
   	  <h3 class="properties">flex-basis</h3>
   	  <p>This defines the size of an item before the remaining space is distributed.  It can be a length or the keyword 'auto'. If flex-basis is set to 0, the extra space around the content is not factored in. When set to auto, the extra space is distributed based on its flex-grow value.</p>
-  	  <code>.item { flex-basis: &lt;length&gt; | auto; }</code>
+  	  <code>.item {<br>  flex-basis: &lt;length&gt; | auto;<br>}</code>
   	  <h3 class="properties">flex</h3>
   	  <p>This property is shorthand for when you need to combine flex-grow, flex-shrink and flex-basis.  Default is 0 1 auto.  Flex-shrink and flex-basis are optional, but it is recommended to use this shorthand property rather than setting indiviual properties because the shorthand sets the other values intelligently.</p>
-  	  <code>.item {
-        flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
-      }</code>
+  	  <code>.item {<br>  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'>} ];<br>}</code>
   	  <h3 class="properties">align-self</h3>
   	  <p>This overwrites the default alignment (or the alignment specified by align-items) for individual flex items.</p>
-  	  <code>.item {
-			  align-self: auto | flex-start | flex-end | center | baseline | stretch;
-			}</code>
+  	  <code>.item {<br>  align-self: auto | flex-start | flex-end | center | baseline | stretch;<br>}</code>
     </section>
     <section class="main-section" id="non_affecting_properties">
-    	<header>Non-Affecting Properties</header>
+    	<header class="section-header">Non-Affecting Properties</header>
       <p>The following properties have no affect on flex items: </p>
       <ul>
       	<li>float</li>
@@ -120,21 +102,36 @@
       </ul>
     </section>
     <section class="main-section" id="reference">
-    	<header>Reference</header>
-    	<p>"Using CSS Flexible Boxes." <i>Mozilla Developer Network</i>. N.p., n.d. Web. 07 July 2017.<br> &lt;<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes</a>&gt;.</p>
-    	<p>Coyier, Chris. "A Complete Guide to Flexbox." <i>CSS-Tricks</i>. N.p., 21 Mar. 2017. Web. 07 July 2017.<br> &lt;<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox</a>&gt;.</p>
+    	<header class="section-header">Reference</header>
+    	<p>"<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Using CSS Flexible Boxes</a>." <i>Mozilla Developer Network</i>. N.p., n.d. Web. 07 July 2017.</p>
+    	<p>Coyier, Chris. "<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a>." <i>CSS-Tricks</i>. N.p., 21 Mar. 2017. Web. 07 July 2017.</p>
     </section>
   </main> 
-  <nav id="navbar">
-  	<header>Flexbox</header>
-  	<a class="nav-link" href="#introduction">Introduction</a>
-  	<a class="nav-link" href="#parent_properties">Parent Properties</a>
-  	<a class="nav-link" href="child_properties">Child Properties</a>
-  	<a class="nav-link" href="#non_affecting_properties">Non-Affecting Properties</a>
-  	<a class="nav-link" href="reference">Reference</a>	
+  <nav class="navigation" id="navbar">
+  	<header class=nav-header>Flexbox Documentation</header>
+    <ul class="nav-list">
+    	<li class="list-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+    	<li class="list-item"><a class="nav-link" href="#parent_properties">Parent Properties</a></li>
+    	<li class="list-item"><a class="nav-link" href="#child_properties">Child Properties</a></li>
+    	<li class="list-item"><a class="nav-link" href="#non_affecting_properties">Non-Affecting Properties</a></li>
+    	<li class="list-item"><a class="nav-link" href="#reference">Reference</a></li>
+    </ul>
   </nav>
-  <footer class="text-center spacing">Created by<strong> Laura Silvey</strong></footer> 
-  <!--<script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>-->
+  <footer class="footer">
+    <div class="footer-links">
+      <a target="blank" href="https://github.com/LauraSilvey">
+        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+      </a>
+      <a target="blank" href="https://codepen.io/lsilvey/">
+        <i class="fa fa-codepen fa-2x" aria-hidden="true"></i>
+      </a>
+      <a target="blank" href="https://www.freecodecamp.com/laurasilvey">
+        <i class="fa fa-free-code-camp fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+    <p class="copyright">Created by<strong> Laura Silvey</strong></p>
+  </footer> 
+  <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
 </body>
 
 </html>
