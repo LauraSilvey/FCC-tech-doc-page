@@ -1,7 +1,7 @@
 body {
-	display: flex;
+  display: flex;
   flex-flow: row wrap;
-	font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .main-doc, .navigation, .footer {
@@ -15,39 +15,39 @@ body {
 */
 
 .navigation {
-	display: flex;
-	flex-flow: column wrap;
-	order: 1;
+  display: flex;
+  flex-flow: column wrap;
+  order: 1;
 }
 
 .nav-header {
-	text-align: center;
-	font-size: 28px;
-	line-height: 42px;
-	margin: 10px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 42px;
+  margin: 10px;
 }
 
 ul.nav-list {
-	display: flex;
-	flex-flow: column wrap;
-	text-align: justify;
-	padding-left: 0px;
-	border-top: solid 2px black;
-	border-right: solid 2px black;
-	border-left: solid 2px black;
-	border-bottom: solid .5px black
+  display: flex;
+  flex-flow: column wrap;
+  text-align: justify;
+  padding-left: 0px;
+  border-top: solid 2px black;
+  border-right: solid 2px black;
+  border-left: solid 2px black;
+  border-bottom: solid .5px black
 }
 
 .list-item {
-	list-style: none;
-	padding-bottom: 8px;
-	padding-left: 40px;
-	border-bottom: solid .5px black;
+  list-style: none;
+  padding-bottom: 8px;
+  padding-left: 40px;
+  border-bottom: solid .5px black;
 }
 
 .nav-link {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 }
 
 /*
@@ -57,20 +57,20 @@ ul.nav-list {
 */
 
 .main-doc {
-	display: flex;
-	flex-flow: column wrap;
-	padding: 20px;
-	order: 2;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 20px;
+  order: 2;
 }
 
 .main-section {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-header {
-	font-size: 28px;
-	line-height: 43px;
+  font-size: 28px;
+  line-height: 43px;
 }
 
 code {
@@ -89,11 +89,11 @@ code {
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .footer, .copyright {
-	color: #5D576B;
+  color: #5D576B;
   text-align: center;
   order: 3;
   font-size: 13px;
@@ -105,28 +105,28 @@ a {
 @media (min-width:992px) {
 
  .main-doc {
-	  flex: 1
-	  height: 100%;
-	  margin-left: 280px;
-	  position: relative;
-	  padding-right: 50px;
-	}
+    flex: 1
+    height: 100%;
+    margin-left: 280px;
+    position: relative;
+    padding-right: 50px;
+  }
 
   .navigation {
-	  position: fixed;
-		width: 250px;
-		top: 0px;
-		left: 0px;
-	}
+    position: fixed;
+    width: 250px;
+    top: 0px;
+    left: 0px;
+  }
 
-	ul.nav-list {
-		border: none;
-	}
+  ul.nav-list {
+    border: none;
+  }
 
-	li {
-		line-height: 24px;
-		font-size: 17px;
-	}
+  li {
+    line-height: 24px;
+    font-size: 17px;
+  }
 
 }
 
